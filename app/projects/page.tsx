@@ -6,19 +6,23 @@ import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import { projectsData } from "../constants/data";
+import ProjectCard from "../components/ProjectCard";
 
-const redis = Redis.fromEnv();
+// const redis = Redis.fromEnv();
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
-  const views = (
-    await redis.mget<number[]>(
-      ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-    )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
-    return acc;
-  }, {} as Record<string, number>);
+  // const views = (
+  //   await redis.mget<number[]>(
+  //     ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
+  //   )
+  // ).reduce((acc, v, i) => {
+  //   acc[allProjects[i].slug] = v ?? 0;
+  //   return acc;
+  // }, {} as Record<string, number>);
+
+  const views: Object = {}
 
   const featured = allProjects.find((project) => project.slug === "unkey")!;
   const top2 = allProjects.find((project) => project.slug === "planetfall")!;
@@ -51,7 +55,12 @@ export default async function ProjectsPage() {
         </div>
         <div className="w-full h-px bg-zinc-800" />
 
-        <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
+        <div className="grid gap-2 grid-cols-3 w-full">
+
+          {projectsData?.map((project) => <ProjectCard key={project.title} {...project} />)}
+        </div>
+
+        {/* <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
             <Link href={`/projects/${featured.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
@@ -131,7 +140,7 @@ export default async function ProjectsPage() {
                 </Card>
               ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
