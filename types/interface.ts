@@ -3,7 +3,6 @@ import { IconType } from "react-icons";
 
 interface techStack{
     name:string,
-    Icon:IconType ,
 }
 
 export interface project{
@@ -14,3 +13,4 @@ export interface project{
     deployedUrl:string,
     techStack:techStack[],
 }
+

@@ -20,7 +20,8 @@ import {
 import { Card } from "./card";
 import { Eye, Link } from "lucide-react";
 import LinkButton from "./link-button";
-import MotionDiv from "./motion-div";
+import TechStackComponent from "./motion-div";
+
 
 const ProjectCard: React.FC<project> = ({
     title,
@@ -104,14 +105,16 @@ const ProjectCard: React.FC<project> = ({
                     </div>
                     <div className="flex justify-between items-center">
                         <div className="flex space-x-4 p-2">
-                            {techStack.map(({ name, Icon }, index) => (
+                            {/* {techStack.map(({ name, Icon }, index) => (
                                 <MotionDiv key={index}>
                                     <Icon />
                                     <p className="ml-2 whitespace-nowrap">{name}</p>
                                 </MotionDiv>
 
 
-                            ))}
+                            ))} */}
+
+                            <TechStackComponent techStack={techStack} />
                         </div>
                     </div>
                 </div>
