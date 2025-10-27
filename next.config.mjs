@@ -6,6 +6,10 @@ const nextConfig = {
 	experimental: {
 		mdxRs: true,
 	},
+
+	images: {
+		domains: ["res.cloudinary.com", "images.unsplash.com","i.postimg.cc"],
+	},
 };
 
 export default withContentlayer(nextConfig);

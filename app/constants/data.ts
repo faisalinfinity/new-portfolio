@@ -1,7 +1,7 @@
 
 import { project } from "@/types/interface";
 import { IconType } from "react-icons";
-import { SiBootstrap, SiChakraui, SiCss3, SiExpress, SiFirebase, SiHtml5, SiJavascript, SiJson, SiMongodb, SiMui, SiNodedotjs, SiReact, SiRedux, SiSocketdotio, SiTypescript } from "react-icons/si";
+import { SiBootstrap, SiChakraui, SiCss3, SiExpress, SiFirebase, SiGooglegemini, SiHtml5, SiJavascript, SiJson, SiMongodb, SiMui, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiSocketdotio, SiTailwindcss, SiTypescript } from "react-icons/si";
 export const IconMap: { [key: string]: IconType } = {
   "Mongodb": SiMongodb,
   "Typescript": SiTypescript,
@@ -17,14 +17,26 @@ export const IconMap: { [key: string]: IconType } = {
   "CSS": SiCss3,
   "HTML": SiHtml5,
   "Bootstrap": SiBootstrap,
-  "JSON": SiJson
+  "JSON": SiJson,
+  "GeminiAPI":SiGooglegemini,
+  "TailwindCSS":SiTailwindcss, 
+  "NextJS":SiNextdotjs,
 }
 
 
 export const projectsData: project[] = [
   {
-    title: "Healthistic (HealthKart.in Clone) Full Stack App ",
-    description: "Healthistic- a great place for people serious about health and fitness. We're a young start-up of around 400 people that work for your needs in fitness and well-being",
+    title: "Developer Flow",
+    description: "A Modern Social QnA Platform for Developers with AI Answers generation similar to Stack Overflow",
+    techStack: [{ name: "Mongodb", }, { name: "NextJS", }, { name: "NodeJS", }, { name: "GeminiAPI", }, { name: "TailwindCSS", }],
+
+    imageUrl: "https://res.cloudinary.com/dq674z2lp/image/upload/v1736859024/devflow-dark_y45wos.png",
+    githubUrl: "https://github.com/faisalinfinity/developer-flow",
+    deployedUrl: "https://developer-flow.vercel.app/",
+  },
+  {
+    title: "Healthistic",
+    description: "Healthistic- a great place for people serious about health and fitness.",
     techStack: [{ name: "Mongodb", }, { name: "Express", }, { name: "React", }, { name: "NodeJS", }, { name: "Chakra", }],
 
     imageUrl: "https://res.cloudinary.com/dq674z2lp/image/upload/v1680457610/18-admin-add-pc_uwpsgz.png",
@@ -32,7 +44,7 @@ export const projectsData: project[] = [
     deployedUrl: "https://frontend-snowy-eta.vercel.app/",
   },
   {
-    title: "Captain America - Game  (Full Stack App)",
+    title: "Captain America - Game",
     description: "Captain America - A Multiplayer Game with Realtime Global chat and scores built within 48hrs.",
     techStack: [
       { name: "Mongodb", },
@@ -48,7 +60,7 @@ export const projectsData: project[] = [
 
   },
   {
-    title: "Productify (Ebay.com Clone)",
+    title: "Productify (Ecommerce Website)",
     description: "Productify is an Ecommerce Website which serves as a platform by offering buyers and sellers a wide range of choice to buy and sell goods through listing format, item condition and delivery format.",
     techStack: [
       { name: "Redux", },
@@ -62,8 +74,8 @@ export const projectsData: project[] = [
     deployedUrl: "https://productify.vercel.app/",
   },
   {
-    title: "Order Matching System like Stock Market (Full Stack App)",
-    description: "This is an order matching system web application that allows users to place orders, view pending orders, and see completed orders with matched prices with dynamic chart built within 2-Days",
+    title: "Order Matching System (Stock Market)",
+    description: "This is an order matching system web application that allows users to place orders, view pending orders, and see completed orders with matched prices with dynamic chart.",
     techStack: [
       { name: "Mongodb", },
       { name: "Express", },
@@ -76,7 +88,7 @@ export const projectsData: project[] = [
     deployedUrl: "https://order-matching-system-omega.vercel.app",
   },
   {
-    title: "Musafir (Make my trip Clone)",
+    title: "Musafir (Travel Website)",
     description: "Musafir is a website for tours and travel created with one thought that is to empower Indian traveler with instant bookings and comprehensive choices.",
     techStack: [
       { name: "React", },
@@ -90,48 +102,6 @@ export const projectsData: project[] = [
     githubUrl: "https://github.com/hr927/Musafir-mmt-clone-",
     deployedUrl: "https://musafir-mmt.netlify.app",
   },
-  {
-    title: "Mediagenix (Buffer.com Clone)",
-    description: "Mediagenix helps you build an audience organically. We’re a values-driven company that provides affordable, intuitive, marketing tools for ambitious people and teams",
-    techStack: [
-      { name: "React", },
-      { name: "Javascript", },
-      { name: "CSS", },
-      { name: "HTML", },
-      { name: "Chakra", },  // Assuming no icon for Bootstrap as it was not provided
-    ],
-    imageUrl: "https://i.postimg.cc/pd8M0mz6/mediagenix-dark.png",
-    githubUrl:
-      "https://github.com/faisalinfinity/limitless-temper-4281/tree/main/mediagenix",
-    deployedUrl: "https://mediagenix.netlify.app/",
-  },
-  {
-    title: "Hiring Heroes (Fiverr.com Clone)",
 
-    description: "Hiring Heroes is a global online marketplace for freelance services. Fiverr’s platform connects freelancers to people or businesses looking to hire.",
-    techStack: [
-      { name: "Bootstrap", },
-      { name: "Javascript", },
-      { name: "CSS", },
-      { name: "HTML", },
-      { name: "JSON", }, // Listed again as per your input
-    ],
-    imageUrl: "https://i.postimg.cc/4x0X2CMm/hh-dark.png",
-    githubUrl: "https://github.com/Tushit99/tedious-advertisement-2369",
-    deployedUrl: "https://helpful-cheesecake-78e935.netlify.app/",
-  },
-  {
-    title: "TimeCamp.com (Clone)",
-    description: "TimeCamp is a simple, yet feature-rich time tracking app to help you gain insights into yourprojects and tasks.",
-    techStack: [
-      { name: "Bootstrap" },
-      { name: "Javascript" },
-      { name: "CSS" },
-      { name: "HTML" },
-      { name: "JSON", }, // Duplicate entry for Bootstrap as provided
-    ],
-    imageUrl: "https://i.postimg.cc/vmmG3Y3R/tc-light.png",
-    githubUrl: "https://github.com/faisalinfinity/utmost-creature-1022",
-    deployedUrl: "https://incomparable-sable-d0bb36.netlify.app/",
-  },
+ 
 ];

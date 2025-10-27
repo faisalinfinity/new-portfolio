@@ -55,7 +55,7 @@ export default async function ProjectsPage() {
         </div>
         <div className="w-full h-px bg-zinc-800" />
 
-        <div className="grid gap-2 grid-cols-3 w-full">
+        <div className="grid gap-2 grid-cols-1 lg:grid-cols-3 w-full">
 
           {projectsData?.map((project) => <ProjectCard key={project.title} {...project} />)}
         </div>
