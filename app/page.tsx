@@ -82,8 +82,8 @@ export default function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
-      <div className="my-8 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 max-w-[43rem] text-wrap">
+      <div className="my-8 flex items-center justify-center text-center animate-fade-in">
+        <h2 className="text-sm w-[97%]  md:w-[60%] text-zinc-500 text-wrap px-2">
           Full-Stack Web Developer crafting high-performance and scalable
           products. Previously built advanced healthcare systems at{" "}
           <Link
