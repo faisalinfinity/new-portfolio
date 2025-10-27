@@ -20,7 +20,7 @@ function detectOS(): DeviceOS {
   }
 
   const ua = navigator.userAgent || "";
-  const platform = (navigator as any).platform || (navigator.userAgentData && navigator.userAgentData.platform) || "";
+  const platform = (navigator as any).platform || (navigator as any).userAgentData?.platform || "";
 
   // helper for version extraction
   const getMatch = (regex: RegExp) => {

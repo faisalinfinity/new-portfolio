@@ -2,9 +2,10 @@
 import { ArrowLeft, Menu as MenuIcon, X as XIcon } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { navigation } from "../page";
+
 import { motion, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { navigation } from "../constants/data";
 
 export const Navigation: React.FC = () => {
   const ref = useRef<HTMLElement>(null);

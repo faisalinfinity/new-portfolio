@@ -4,19 +4,9 @@ import Particles from "./components/particles";
 import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
+import { navigation } from "./constants/data";
 
-export const navigation = [
-  { name: "Experience", href: "/experience" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-  { name: "Skills", href: "/skills" },
 
-  { name: "Blogs", href: "https://medium.com/@faisalmujtaba" },
-  {
-    name: "Resume",
-    href: "https://drive.google.com/file/d/1VusEEdqihS8rlkaLZy7tERDR5U0tT-fb/view?usp=sharing",
-  },
-];
 
 const socials = [
   {
